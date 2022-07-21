@@ -31,6 +31,7 @@ Design and implement a basic TCP load balancer that is used to distribute networ
 
 - High availability is beyond the scope of this design. In practice, to avoid single point of failure problem, we can set up multiple load balancers and use DNS to load balance between them. A solution provided by Nginx Plus can be found [here](https://www.nginx.com/resources/glossary/dns-load-balancing/).
 
+
 ## Details
 
 ### Load balancer
