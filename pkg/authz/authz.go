@@ -2,8 +2,8 @@ package authz
 
 import (
 	"errors"
+	"layer4balancer/config"
 	"strings"
-	"tcploadbalancer/config"
 
 	log "github.com/sirupsen/logrus"
 )

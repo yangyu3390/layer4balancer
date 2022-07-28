@@ -2,8 +2,8 @@ package balance
 
 import (
 	"errors"
-	a "tcploadbalancer/pkg/authz"
-	u "tcploadbalancer/pkg/upstream"
+	a "layer4balancer/pkg/authz"
+	u "layer4balancer/pkg/upstream"
 
 	log "github.com/sirupsen/logrus"
 )

@@ -3,8 +3,8 @@ package config
 import (
 	"crypto/x509"
 	"fmt"
+	u "layer4balancer/pkg/upstream"
 	"os"
-	u "tcploadbalancer/pkg/upstream"
 	"time"
 )
 

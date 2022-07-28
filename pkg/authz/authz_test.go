@@ -1,7 +1,7 @@
 package authz
 
 import (
-	"tcploadbalancer/config"
+	"layer4balancer/config"
 	"testing"
 )
 

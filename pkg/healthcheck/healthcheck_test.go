@@ -1,9 +1,9 @@
 package healthcheck
 
 import (
+	"layer4balancer/config"
+	u "layer4balancer/pkg/upstream"
 	"sync"
-	"tcploadbalancer/config"
-	u "tcploadbalancer/pkg/upstream"
 	"testing"
 	"time"
 )

@@ -1,8 +1,8 @@
 package healthcheck
 
 import (
-	"tcploadbalancer/config"
-	u "tcploadbalancer/pkg/upstream"
+	"layer4balancer/config"
+	u "layer4balancer/pkg/upstream"
 	"time"
 
 	log "github.com/sirupsen/logrus"

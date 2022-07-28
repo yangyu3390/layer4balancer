@@ -2,9 +2,9 @@ package server
 
 import (
 	"fmt"
+	"layer4balancer/config"
+	u "layer4balancer/pkg/upstream"
 	"os"
-	"tcploadbalancer/config"
-	u "tcploadbalancer/pkg/upstream"
 	"testing"
 	"time"
 )

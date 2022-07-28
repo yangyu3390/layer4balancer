@@ -1,8 +1,8 @@
 package ratelimit
 
 import (
+	"layer4balancer/config"
 	"sync"
-	"tcploadbalancer/config"
 	"time"
 
 	log "github.com/sirupsen/logrus"

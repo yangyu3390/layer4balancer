@@ -1,7 +1,7 @@
 package ratelimit
 
 import (
-	"tcploadbalancer/config"
+	"layer4balancer/config"
 	"testing"
 	"time"
 )
