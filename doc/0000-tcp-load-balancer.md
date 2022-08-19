@@ -9,7 +9,7 @@ state: implemented
 
   
 
-# Request For Discussion 0 - TCP load balancer
+# Request For Discussion 0 - TCP proxy
 
 
 
@@ -17,7 +17,7 @@ state: implemented
 
   
 
-Design and implement a basic TCP load balancer that is used to distribute network load across multiple upstreams.
+Design and implement a basic TCP proxy that is used to distribute network load across multiple upstreams.
 
  
 
