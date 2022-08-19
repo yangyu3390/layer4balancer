@@ -1,5 +1,5 @@
-# layer4balancer
-Layer 4 TCP load balancer
+# layer4proxy
+Layer 4 TCP proxy
 
 
 ## Prerequiste
@@ -9,15 +9,15 @@ Install go1.18
 
 ## Features
 
-- Least connection load balancing
+- Load balancing
 
 - Health checking
 
 - Rate limiting
 
-- mTLS
+- mTLS authentication
 
-- Authorization scheme
+- Authorization
 
 
 ## Design doc
