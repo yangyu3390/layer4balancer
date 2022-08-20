@@ -15,8 +15,8 @@ type HealthCheckCfg struct {
 
 type RateLimiterCfg struct {
 	CleanupInterval time.Duration
-	Limit           int
-	Window          time.Duration
+	Burst           int
+	Token           int
 }
 
 type AuthzCfg struct {
@@ -48,8 +48,8 @@ func InitConfig() ServerCfg {
 
 	rateLimiterCfg := RateLimiterCfg{
 		CleanupInterval: 20 * time.Second,
-		Limit:           1,
-		Window:          1 * time.Second,
+		Burst:           2,
+		Token:           4,
 	}
 
 	authzCfg := AuthzCfg{

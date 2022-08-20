@@ -17,8 +17,8 @@ func createTestConfig() config.ServerCfg {
 
 	rateLimiterCfg := config.RateLimiterCfg{
 		CleanupInterval: 20 * time.Second,
-		Limit:           1,
-		Window:          1 * time.Second,
+		Burst:           1,
+		Token:           1,
 	}
 
 	authzCfg := config.AuthzCfg{

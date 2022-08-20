@@ -18,8 +18,8 @@ func TestRateLimit(t *testing.T) {
 			description: "happy path",
 			config: config.RateLimiterCfg{
 				CleanupInterval: 60 * time.Second,
-				Limit:           1,               // max number of requests within the time window
-				Window:          1 * time.Second, // time window
+				Burst:           2,
+				Token:           14,
 			},
 			clientReqs: []string{
 				"client a",
@@ -33,8 +33,8 @@ func TestRateLimit(t *testing.T) {
 			description: "reject all requests",
 			config: config.RateLimiterCfg{
 				CleanupInterval: 60 * time.Second,
-				Limit:           0,
-				Window:          1 * time.Second,
+				Burst:           0,
+				Token:           1,
 			},
 			clientReqs: []string{
 				"client a",
@@ -71,8 +71,8 @@ func TestCleanup(t *testing.T) {
 			description: "client a got deleted twice and client b got deleted once",
 			config: config.RateLimiterCfg{
 				CleanupInterval: 100 * time.Millisecond,
-				Limit:           1,
-				Window:          1 * time.Second,
+				Burst:           1,
+				Token:           1,
 			},
 			clientReqs: []string{
 				"client a",
@@ -88,8 +88,8 @@ func TestCleanup(t *testing.T) {
 			description: "no clients got deleted",
 			config: config.RateLimiterCfg{
 				CleanupInterval: 10 * time.Second,
-				Limit:           0,
-				Window:          1 * time.Second,
+				Burst:           0,
+				Token:           1,
 			},
 			clientReqs: []string{
 				"client a",
