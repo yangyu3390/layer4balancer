@@ -97,13 +97,14 @@ healthCheckCfg := HealthCheckCfg{
 }
 ```
 
-Rate limiter allows each client to make 1 request per second. The background gorouine will do clean up every 20 seconds.
+Rate limiter allows each client an average of 2 requests per second, with a maximum of 4 requests in a single burst. 
+The background gorouine will do clean up every 20 seconds.
 
 ```go
 rateLimiterCfg := RateLimiterCfg{
     CleanupInterval: 20 * time.Second,
-    Limit:           1,
-    Window:          1 * time.Second,
+    Burst:           2,
+    Token:           4,
 }
 ```
 

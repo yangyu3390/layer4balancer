@@ -10,7 +10,6 @@ import (
 )
 
 type client struct {
-	numReq      int
 	lastSeen    time.Time
 	rateLimiter *rate.Limiter
 }
@@ -79,9 +78,8 @@ func (r *RateLimiter) Allows(clientId string) bool {
 	defer r.mu.Unlock()
 	if _, found := r.clients[clientId]; !found {
 		r.clients[clientId] = &client{
-			0,
 			time.Now(),
-			rate.NewLimiter(2, 4),
+			rate.NewLimiter(rate.Limit(r.burst), r.token),
 		}
 	}
 	return r.clients[clientId].rateLimiter.Allow()

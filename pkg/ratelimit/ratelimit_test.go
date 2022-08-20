@@ -19,7 +19,7 @@ func TestRateLimit(t *testing.T) {
 			config: config.RateLimiterCfg{
 				CleanupInterval: 60 * time.Second,
 				Burst:           2,
-				Token:           14,
+				Token:           1,
 			},
 			clientReqs: []string{
 				"client a",
@@ -34,7 +34,7 @@ func TestRateLimit(t *testing.T) {
 			config: config.RateLimiterCfg{
 				CleanupInterval: 60 * time.Second,
 				Burst:           0,
-				Token:           1,
+				Token:           0,
 			},
 			clientReqs: []string{
 				"client a",
